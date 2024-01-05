@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+
+      <style>
+
+*
+{
+      font-family: Consolas;
+}
+            section{
+                  background: #ffffff;
+                  width: 500px;
+                  padding:50px;
+                  margin: auto;
+            
+                 box-shadow: 1px 9px  13px rgba(0, 0, 0, 0.703);
+                  border-radius: 9px;
+            }
+            input
+            {
+                  width: 250px;
+            }
+            body
+            {
+                  background: #2c6bdf;
+            }
+
+            header
+            {
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+            font-size: 25px;
+            }            div
+            {
+                  margin-top: 12px;
+            }
+            footer
+            {
+                  text-align: center;
+                  margin-top: 20px;
+                  color: #ffffff;
+            }
+            b
+            {
+                  color: red;
+            }
+      </style>
+</head>
+<body>
+      <header>Verificar a Idade</header>
+      
+                  <section>
+                     
+                      
+                        <div>
+
+                              Ano nascimento: <input type="number" name="" id="txt_numero">  <button onclick="ok()" style="cursor: pointer;">Verificar</button>  
+                        
+                        <div id="res">Resultado...</div></div>
+                  </section>
+
+                  <script>
+                        var n = window.document.getElementById('txt_numero')
+                        var x = document.getElementById('res');
+
+                       function ok()
+                       {
+                              if(n.value==0)
+                              {
+                                   
+                                    alert('Por favor verifique os dados e volte novamente!!');
+                              }
+                        else
+                        {
+                              let y = Number(n.value);
+
+                              let ano=2024;
+
+                              var idade = ano-y;
+
+                              if(idade>=18)
+                              {
+                                    x.innerHTML="Você nasceu em <b>"+y+"</b> e tens <b> "+idade+" anos</b> de idade.";
+                                    x.innerHTML+="Com essa idade já podes votar!"
+                              }
+                              else
+                              {
+                                    x.innerHTML="Você nasceu em <b>"+y+"</b> e tens <b>"+idade+" anos</b> de idade.";
+                                    x.innerHTML+="Com essa idade Não podes votar!"
+
+                              }
+                      
+                            
+                        }
+                            
+                       }
+                  </script>
+                  
+</body>
+<footer><p>&copy;albanojoaoalberto01@gmail.com</p></footer>
+</html>
